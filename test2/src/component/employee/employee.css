@@ -1,0 +1,28 @@
+#employees{
+    display: flex;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    margin-top: 20px;
+    border: 1px solid #333;
+    padding: 6px 12px;
+    border-radius: 8px;
+    
+}
+li:hover{
+    background-color: #8b8989;
+    color:rgb(244, 244, 244);
+    transition: all;
+}
+.employeeList{
+    width:50%;
+    padding: 0 100px;
+
+}
+.employDetail{
+    width: 50%;
+}

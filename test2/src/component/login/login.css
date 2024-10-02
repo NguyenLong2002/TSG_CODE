@@ -1,0 +1,32 @@
+#formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:40%;
+    margin: auto;
+    margin-top: 50px;
+}
+.box{
+    width:35%;
+    box-sizing: border-box;
+}
+.input{
+    padding: 4px 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-top: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.loginBtn{
+    padding:6px 32px;
+    margin-top: 16px;
+    border-radius: 6px;
+    border:none;
+    background-color: green;
+    color:rgb(246, 229, 229);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
