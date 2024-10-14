@@ -1,42 +1,28 @@
-import React, { Component } from 'react';
+import { useState,useEffect } from 'react';
 
-class EmployeeDetail2 extends Component {
+function EmployeeDetail2({employee}){
 
-  constructor(props){
-    super(props)
-    this.state = {
-      school : ''
+  const [employeeData, setEmployeeData] = useState({
+    school:''
+  })
+
+  useEffect(()=>{
+    if(employee){
+      setEmployeeData({
+        school:`${employee.school} (VIP)`
+      })
     }
-  }
-  componentDidMount() {
-    const { employee } = this.props;
-    this.setSchool(employee);
-  }
+  },[employee])
 
-  setSchool(employee){
-      this.setState ({
-        school : `${employee.school} (abc)`
-      });
-    }
-
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.employee !== this.props.employee) {
-      this.setSchool(this.props.employee);
-    }
-  }
-
-
-  render() {
-    const {school} = this.state;
-
-    return (
-      <div>
-        <h2>Thông tin trường học</h2>
-        <p>Trường: {school}</p>
+  return(
+     <div style={{ display: 'flex' }}>
+        <div style={{ marginRight: 20 }}>
+          <h2>Thông tin trường học</h2>
+          <p>Trường: {employeeData.school}</p>
+        </div>
       </div>
-    );
-  }
+  )
 }
+
 
 export default EmployeeDetail2;
